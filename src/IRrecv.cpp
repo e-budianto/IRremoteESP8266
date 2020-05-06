@@ -793,6 +793,10 @@ bool IRrecv::decode(decode_results *results, irparams_t *save,
     DPRINTLN("Attempting Delonghi AC decode");
     if (decodeDelonghiAc(results, offset)) return true;
 #endif  // DECODE_DELONGHI_AC
+#if DECODE_MULTIBRACKETS
+    DPRINTLN("Attempting Multibrackets decode");
+    if (decodeMultibrackets(results, offset)) return true;
+#endif  // DECODE_MULTIBRACKETS
   // Typically new protocols are added above this line.
   }
 #if DECODE_HASH

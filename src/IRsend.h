@@ -577,6 +577,11 @@ class IRsend {
   void sendDelonghiAc(uint64_t data, uint16_t nbits = kDelonghiAcBits,
                       uint16_t repeat = kDelonghiAcDefaultRepeat);
 #endif
+#if SEND_MULTIBRACKETS
+  void sendMultibrackets(const uint64_t data,
+                         const uint16_t nbits = kMultibracketsBits,
+                         const uint16_t repeat = kMultibracketsDefaultRepeat);
+#endif
 
  protected:
 #ifdef UNIT_TEST
